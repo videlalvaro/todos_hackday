@@ -1,0 +1,19 @@
+%%-*- mode: erlang -*-
+{application, hackday,
+ [
+  {description, "hackday"},
+  {vsn, "1"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  inets,
+                  crypto,
+                  mochiweb,
+                  webmachine,
+                  emysql
+                 ]},
+  {mod, { hackday_app, []}},
+  {env, []}
+ ]}.

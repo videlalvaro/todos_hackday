@@ -10,7 +10,13 @@ This project was part of a hackday at [Liip](http://www.liip.ch). The app was bu
 
 Simply clone the project and then run make:
 
+    $ git clone git://github.com/videlalvaro/todos_hackday.git todos
+    $ cd todos
+    $ make
 
+Then create your own configuration file by copying the sample one and then editing the MySQL configuration:
+
+    $ cp ./priv/hackday.conf.sample ./priv/hackday.conf
 
 # MySQL Setup #
 
@@ -22,3 +28,11 @@ Create the following table:
       `isDone` tinyint(1) NOT NULL DEFAULT '0',
       PRIMARY KEY (`slug`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+# Running the app #
+
+Cd into the `todos` folder and run the following command:
+
+    $ ./start.sh
+
+Then open [localhost:8000](localhost:8000)

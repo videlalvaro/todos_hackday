@@ -1,0 +1,9 @@
+[
+    {hackday, [
+        {mysql_host, "localhost"},
+        {mysql_port, 3306},
+        {mysql_user, "user"},
+        {mysql_pass, "pass"},
+        {mysql_database, "hackday"}
+    ]}
+].

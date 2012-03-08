@@ -35,4 +35,4 @@ Cd into the `todos` folder and run the following command:
 
     $ ./start.sh
 
-Then open [localhost:8000](localhost:8000).
+Then open [http://localhost:8000](http://localhost:8000).

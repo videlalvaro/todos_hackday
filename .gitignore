@@ -2,3 +2,4 @@ deps
 ebin
 priv/log
 erl_crash.dump
+priv/hackday.config

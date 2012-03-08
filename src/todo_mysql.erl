@@ -18,6 +18,5 @@ get_last_insert_id() ->
 
 delete_todo(Slug) ->
     emysql:prepare(del_todo_stmt, <<"DELETE FROM todo WHERE slug = ?">>),
-    Result = emysql:execute(todo_pool, del_todo_stmt, [Slug]),
-    io:format("Result: ~p~n", [Result]),
+    {ok_packet,_,_,_,_,_,_} = emysql:execute(todo_pool, del_todo_stmt, [Slug]),
     ok.

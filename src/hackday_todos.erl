@@ -26,7 +26,6 @@ content_types_accepted(ReqData, State) ->
 %% handle data insertion here
 accept_content(ReqData, Context) ->
     Data = mochiweb_util:parse_qs(wrq:req_body(ReqData)),
-    io:format("Data: ~p~n", [Data]),
     case proplists:get_value("title", Data) of
         undefined ->
             {false, ReqData, Context};
@@ -36,7 +35,6 @@ accept_content(ReqData, Context) ->
                     {false, ReqData, Context};
                 Slug ->
                     IsDone = hackday_helpers:is_done_from_qs(proplists:get_value("isDone", Data, "false")),
-                    io:format("IsDone: ~p~n", [IsDone]),
                     {ok, _Id} = todo_mysql:save_todo(Slug, Title, IsDone),
                     {true, ReqData, Context}
             end
